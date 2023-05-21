@@ -1,0 +1,116 @@
+ body {
+            overflow: hidden;
+        }
+
+        .game-container {
+            width: 400px;
+            height: 800px;
+            background-color: #f1f1f1;
+            position: relative;
+            margin: 0 auto;
+            display: none; /* Hide the game container by default */
+        }
+
+        .road {
+            width: 400px;
+            height: 700px;
+            position: absolute;
+            top: 0;
+            left: 0;
+             background-image: url("./images/road.svg");
+            background-size: 100%;
+            background-repeat: repeat-y;
+            animation: roadAnimation 2s linear infinite;
+        }
+         
+           @keyframes roadAnimation {
+            0% {
+                background-position-y: 0%;
+            }
+            100% {
+                background-position-y: 200%;
+            }
+        }
+        
+
+        .car {
+            width: 56px;
+            height: 90px;
+            background-image: url("./images/green.png"); 
+            background-size: cover;
+            position: absolute;
+            bottom: 0px;
+            left: 2px;
+            transition: left 0.05s;
+        }
+
+        .opposite-car {
+            width: 56px;
+            height: 90px;
+            position: absolute;
+        }
+ 
+        .lane-1 {
+            left: 30px;
+          
+        }
+
+        .lane-2 {
+            left: 160px;
+          
+        }
+
+        .lane-3 {
+            left: 290px;
+         
+        }
+
+        .score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 50px;
+            font-weight: bold;
+            background-color: aqua;
+           
+        }
+
+        .restart-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .instruction-container {
+            width:100%;
+            height: 600px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: aqua;
+        }
+
+        .instruction-text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .start-button {
+            padding: 10px 20px;
+            background-color: #ddd;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
